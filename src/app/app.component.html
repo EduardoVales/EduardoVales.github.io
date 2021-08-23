@@ -1,11 +1,11 @@
 <nav class="navbar navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Todo App</a>
+    <a class="navbar-brand" href="#">Gerenciador de Tarefas</a>
   </div>
 </nav>
 
 <div class="container mt-5">
-  <h3>Todos</h3>
+  <h3>Tarefas</h3>
   <hr />
   <form [formGroup]="form" (ngSubmit)="submit()">    
     <div class="row">
@@ -26,13 +26,13 @@
           <span class="{{todo.done ? 'done' : ''}}">
             {{todo.description}}
           </span>                
-          {{todo.doneDate}}
+          Concluido em: {{todo.doneDate}}
           <div class="btn-group">
             <button type="button" class="btn btn-success w-2" 
-            [disabled]="todo.done" (click)="done(todo)">Done</button>
+            [disabled]="todo.done" (click)="done(todo)">Concluir</button>
             
             
-            <button type="button" class="btn btn-danger" (click)="delete(todo)">Delete</button>
+            <button type="button" class="btn btn-danger" (click)="delete(todo)">Deletar</button>
           </div>
         </li>
       </ul>
