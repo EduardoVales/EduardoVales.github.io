@@ -26,7 +26,7 @@
           <span class="{{todo.done ? 'done' : ''}}">
             {{todo.description}}
           </span>                
-          Concluido em: {{todo.doneDate}}
+           {{todo.doneDate}}
           <div class="btn-group">
             <button type="button" class="btn btn-success w-2" 
             [disabled]="todo.done" (click)="done(todo)">Concluir</button>
